@@ -1,0 +1,98 @@
+<h3>Signup!</h3>
+
+<form action="/createaccount" method="POST" autocomplete="off">
+  <input type="hidden" name="_id" value="{{user._id}}" />
+
+  <div class="form-group col-md-8">
+    <label>First Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="FirstName"
+      placeholder="First Name"
+      value="{{user.FirstName}}"
+    />
+    <div class="text-danger">
+      {{user.FirstNameError}}</div>
+  </div>
+
+  <div class="form-group col-md-8">
+    <label>Middle Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="MiddleName"
+      placeholder="Middle Name"
+      value="{{user.MiddleName}}"
+    />
+    <div class="text-danger">
+      {{user.MiddleNameError}}</div>
+  </div>
+
+  <div class="form-group col-md-8">
+    <label>Last Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="LastName"
+      placeholder="Last Name"
+      value="{{user.LastName}}"
+    />
+    <div class="text-danger">
+      {{user.LastNameError}}</div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Email</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Email"
+        placeholder="Email"
+        value="{{user.Email}}"
+      />
+      <div class="text-danger">
+        {{user.EmailError}}</div>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label>Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Username"
+        placeholder="Username"
+        value="{{user.Username}}"
+      />
+      <div class="text-danger">
+        {{user.UsernameError}}</div>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label>Password</label>
+      <input
+        type="Password"
+        class="form-control"
+        name="Password"
+        min="{.8,}"
+        placeholder="Password"
+        value="{{user.Password}}"
+      />
+      <div class="text-danger">
+        {{user.PasswordError}}</div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>
+      Create Account</button>
+    <input
+      type="button"
+      class="btn btn-secondary"
+      value="Go back!"
+      onclick="history.back()"
+    />
+  </div>
+</form>

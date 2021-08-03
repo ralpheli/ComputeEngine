@@ -1,0 +1,51 @@
+<h3><a class="btn btn-secondary" href="/registration"><i class="fa fa-plus"></i>
+    Create New</a>
+  Reservation Lists</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Reserve Date</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+      <tr align="center">
+        <td>{{this.FirstName}}</td>
+        <td>{{this.MiddleName}}</td>
+        <td>{{this.LastName}}</td>
+        <td>{{this.Age}}</td>
+        <td>{{this.Address}}</td>
+        <td>{{this.PhoneNumber}}</td>
+        <td>{{this.Email}}</td>
+        <td>{{this.RegDate}}</td>
+
+        <td>
+          <a href="/registration/{{this._id}}"><i
+              class="fa fa-pencil fa-lg"
+              aria-hiddden="true"
+            ></i></a>
+          <a
+            href="/registration/delete/{{this._id}}"
+            onclick="return confirm('Are you sure you want to delete this registration?');"
+          ><i class="fa fa-trash fa-lg" aria-hiddden="true"></i></a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<input
+  type="button"
+  class="btn btn-secondary"
+  value="Go back!"
+  onclick="history.back()"
+/>

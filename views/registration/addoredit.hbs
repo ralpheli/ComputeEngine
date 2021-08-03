@@ -1,0 +1,129 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/registration" method="POST" autocomplete="off">
+  <input type="hidden" name="_id" value="{{registration._id}}" />
+
+  <div class="form-group col-md-8">
+    <label>First Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="FirstName"
+      placeholder="First Name"
+      value="{{registration.FirstName}}"
+    />
+    <div class="text-danger">
+      {{registration.FirstNameError}}</div>
+  </div>
+
+  <div class="form-group col-md-8">
+    <label>Middle Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="MiddleName"
+      placeholder="Middle Name"
+      value="{{registration.MiddleName}}"
+    />
+    <div class="text-danger">
+      {{registration.MiddleNameError}}</div>
+  </div>
+
+  <div class="form-group col-md-8">
+    <label>Last Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="LastName"
+      placeholder="Last Name"
+      value="{{registration.LastName}}"
+    />
+    <div class="text-danger">
+      {{registration.LastNameError}}</div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-2">
+      <label>Age</label>
+      <input
+        type="Number"
+        class="form-control"
+        name="Age"
+        placeholder="Age"
+        min="18"
+        value="{{registration.Age}}"
+      />
+      <div class="text-danger">
+        {{registration.AgeError}}</div>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label>Address</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Address"
+        placeholder="Address"
+        value="{{registration.Address}}"
+      />
+      <div class="text-danger">
+        {{registration.AddressError}}</div>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label>Phone Number</label>
+      <input
+        type="text"
+        class="form-control"
+        name="PhoneNumber"
+        placeholder="Phone Number"
+        patter="{11}"
+        value="{{registration.PhoneNumber}}"
+      />
+      <div class="text-danger">
+        {{registration.PhoneNumberError}}</div>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label>Email</label>
+      <input
+        type="text"
+        class="form-control"
+        name="Email"
+        placeholder="Email"
+        value="{{registration.Email}}"
+      />
+      <div class="text-danger">
+        {{registration.EmailError}}</div>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label>Reservation Date</label>
+      <input
+        type="date"
+        class="form-control"
+        name="RegDate"
+        placeholder="RegistrationDate"
+        value="{{registration.RegDate}}"
+      />
+      <div class="text-danger">
+        {{registration.RegDateError}}</div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>
+      Register</button>
+    <a class="btn btn-secondary" href="/registration/list"><i
+        class="fa fa-list-alt"
+      ></i>
+      Registration List</a>
+    <input
+      type="button"
+      class="btn btn-secondary"
+      value="Go back!"
+      onclick="history.back()"
+    />
+  </div>
+</form>
